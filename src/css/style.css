@@ -1,0 +1,451 @@
+/* Resetando os estilos padrão da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%; /* tamanho maximo da imagem em relação a tag pai */
+}
+
+a {
+    text-decoration: none; /* tira a linha do link */
+}
+
+ul {
+    list-style: none; /* tira a bolinha da lista*/
+}
+
+html {
+    scroll-behavior: smooth; /* deixa a animação suave do menu até o item da lista */
+}
+
+/*============================ Estilização geral ==========================*/
+body {
+    /*background-image: url(../images/Fundo.png);
+    z-index: -2; /* coloca a imagem para baixo */
+    /*filter: brightness(90%); /* opacidade da imagem */
+    background-color: #2A1005;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 370 ;
+    font-style: normal;
+}
+
+.imagem-logo {
+    width: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items:center;
+}
+
+.titulo {
+    margin-left: 5px; /* distanciamento da logo para o texto */
+    font-size: 16px; /* tamanho da fonte */
+    font-weight: bold;
+    color: #3D1A08;
+    border: none;
+}
+
+/*============================== Cabeçalho =================================*/
+.cabecalho {
+    background-color: #F0DFC0;
+    display: flex;
+    justify-content: space-between; /* espaçamento entre os itens*/
+    align-items: center; /* alinhamento dos itens ao centro */
+    padding: 25px 0; /* espaçamento do item para a pagina */
+    margin: 0 auto; /* alinha ao meio os elementos quando a tela é maior */
+    flex-wrap: wrap; /* realoca os itens quando a tela é diminuida */
+}
+
+.cabecalho .navegacao .menu{
+    display: flex;
+}
+
+.cabecalho .navegacao .menu .item{
+    margin: 10px;
+    color: #3D1A08;
+
+}
+
+.cabecalho .navegacao .menu a{
+    padding: 15px;
+    border-radius: 30px;
+    color: #3D1A08;
+}
+
+.cabecalho .navegacao .menu a:hover {
+    background-color: #3D1A08 ;
+    color: #F0DFC0;
+}
+/* ===== MENU HAMBÚRGUER ===== */
+
+/* Botão hambúrguer */
+.menu-hamburguer {
+    display: none; /* Escondido por padrão */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #3D1A08;
+    padding: 10px;
+}
+
+/* Menu navigation */
+.navegacao {
+    display: flex;
+}
+
+.navegacao .menu {
+    display: flex;
+}
+
+/* ===== RESPONSIVO - Mobile (até 768px) ===== */
+@media (max-width: 768px) {
+    /* Mostrar botão hambúrguer em mobile */
+    .menu-hamburguer {
+        display: block;
+        margin-right: 10px;
+        order: 2; /* Coloca o botão à direita */
+    }
+
+    /* Esconder menu por padrão */
+    .navegacao {
+        display: none;
+        position: absolute;
+        top: 100%; /* Fica logo abaixo do header */
+        left: 0;
+        right: 0;
+        background-color: #F0DFC0;
+        flex-direction: column;
+        width: 100%;
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Menu ativo (mostrar) */
+    .navegacao.ativo {
+        display: flex;
+    }
+
+    .navegacao .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navegacao .menu .item {
+        margin: 0;
+        border-bottom: 1px solid #e2c99a;
+    }
+
+    .navegacao .menu a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 0;
+    }
+
+    /* Logo em mobile */
+    .logo {
+        order: 1;
+        flex: 1;
+    }
+
+    .cabecalho {
+        position: relative;
+    }
+}
+/*============================== Cabeçalho =================================*/
+
+/*========================== Conteúdo Principal ============================*/
+/*================================= Início =================================*/
+.conteudo-principal .inicio {
+    justify-content: space-between;
+    align-items: center;
+    color: #F0DFC0;
+    min-height: 778px;
+    display: flex;
+    margin: 8%;
+}
+
+.conteudo-principal .inicio .titulo-principal span {
+    display: inline-block;
+    color: #e2c99a;
+    margin-left: 8%;
+    padding: 0;
+}
+
+.conteudo-principal .inicio .conteudo-inicio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.conteudo-principal .inicio .paragrafo-principal {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.conteudo-principal .inicio .imagem {
+    width: 40%;
+    max-width: 350px;
+    height: 20%;
+    border: 1px solid #F0DFC0;
+    margin: 1rem;
+    border-radius: 90px 5px 90px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 768px) {
+    .conteudo-principal .inicio {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .conteudo-principal .inicio .titulo-principal {
+        text-align: center;
+    }
+
+    .conteudo-principal .inicio .titulo-principal span {
+        margin-left: 0;
+    }
+
+    .conteudo-principal .inicio .paragrafo-principal {
+        padding: 20px 0;
+    }
+
+    .conteudo-principal .inicio .imagem {
+        width: 80%;
+        max-width: none;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+/*================================= Início =================================*/
+/*============================ Nossa História ============================= */
+.nossa-historia {
+    background-color: #e2c99a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 778px;
+}
+
+.nossa-historia .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.nossa-historia .conteudo .informacoes {
+    width: 48%;
+
+}
+
+.nossa-historia .conteudo .imagem {
+    width: 40%;
+    border: 1px solid #2A1005;
+    border-radius: 90px 5px 90px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.nossa-historia .conteudo .informacoes .titulo {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #3D1A08;
+}
+
+.nossa-historia .conteudo .informacoes .texto {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #3D1A08;
+    font-weight: 400
+}
+
+@media (max-width: 768px) {
+    .nossa-historia .conteudo {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .nossa-historia .conteudo .informacoes {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nossa-historia .conteudo .imagem {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/*============================= Nossa História ============================== */
+
+/*============================= Mais Pedidos ============================== */
+/* criando os painéis */
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 1170px; /* tamanho máximo da página*/
+    min-height: 778px; /* tamanho mínimo da página */
+    max-width: 1170px; /* largura máxima da página */
+    position: relative;
+    margin: 0 auto;
+}
+
+/* fazendo a imagem aparecer no painel */
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; /* coloca a imagem para baixo */
+    filter: brightness(70%); /* opacidade da imagem */
+    overflow: hidden;
+}
+
+/* colocando imagem */
+.conteudo-principal .paineis .cardapio1 {
+    background-image: url('../images/Latte-Perfeito.png'); 
+}
+.conteudo-principal .paineis .cardapio2 {
+    background-image: url('../images/Latte-Morango.png'); 
+}
+.conteudo-principal .paineis .cardapio3 {
+    background-image: url('../images/Latte-Pistache.png'); 
+}
+
+/* estilizando o titulo do painel */
+.conteudo-principal .paineis .titulo {
+    color: #ffffff;
+    font-size: calc(1em + 1vw);
+}
+/* incluir a imagem da seta */
+.conteudo-principal .paineis .seta {
+    background: url('../images/seta.png');
+    /* adequando a seta ao tamanho da largura e altura */
+    background-size: contain;
+    /* adequando a seta ao tamanho da largura e altura */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* esconder texto de um elemento */
+    text-indent: 100%;
+    overflow: hidden;
+    /* esconder texto de um elemento */
+}
+/* estilizando as setas */
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px; /* colocando a seta no canto */
+    transform: rotateY(180deg);
+} 
+
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 20px; /* colocando a seta no canto */  
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    display: none; /* esconde todos por padrão */
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar {
+    display: block; /* mostra só o que tiver a classe .mostrar */
+}
+/*============================= Mais Pedidos ============================== */
+/*========================== Conteúdo Principal ============================*/
+
+
+/*================================ Rodapé ==================================*/
+
+.rodape {
+    background-color: #F0DFC0 ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.rodape a {
+    color: #2A1005;
+    border-radius: 20px;
+    padding: 5px;
+    line-height: 2; /* espaçamento das linhas internas */
+}
+
+.rodape .produto a{
+    color: #2A1005;
+}
+.rodape .produto:hover a {
+    background-color: #2A1005;
+    color: #e2c99a;
+}
+
+.rodape .rodape-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 200px;
+}
+
+.rodape .titulo-rodape {
+    margin-left: 5px; /* distanciamento da logo para o texto */
+    margin-top: 20px;
+    font-size: 16px; /* tamanho da fonte */
+    font-weight: bold;
+    color: #2A1005;
+}
+
+.rodape .visite {
+    color: #2A1005;
+    font-weight: 400;
+    margin: 5px;
+    pointer-events: none /* tira o cursor de mãozinha */
+}
+
+.rodape .box-copyright {
+    margin-top: 40px;
+}
+
+ .rodape .copyright {
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+ }
+
+ @media (max-width: 768px) {
+    .rodape {
+        text-align: center;
+        padding: 10px;
+    }
+    .rodape .rodape-info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .rodape .titulo-rodape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .rodape .box-copyright {
+        align-items: center;
+        margin-top: 20px;
+    }
+    }
+/*================================ Rodapé ==================================*/
