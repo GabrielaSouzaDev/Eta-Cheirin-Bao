@@ -286,8 +286,66 @@ body {
 }
 
 /*============================= Nossa História ============================== */
+/*================================ Cardápio ================================= */
+.menu {
+    background-color: #e2c99a;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 778px;
+    margin-top: 30px;
+}
 
-/*============================= Mais Pedidos ============================== */
+.menu .titulo {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #3D1A08;
+}
+
+.menu .imagem-item {
+    width: 50%;
+    border: 1px solid #2A1005;
+    border-radius: 50%;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.menu .descricao-item {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #3D1A08;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu .itens-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+    grid-auto-rows: 1fr;
+}
+
+.menu .item-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2A1005;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #F0DFC0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+/*================================ Cardápio ================================= */
+/*============================== Mais Pedidos =============================== */
 /* criando os painéis */
 .conteudo-principal .paineis {
     display: flex;
@@ -315,10 +373,10 @@ body {
 
 /* colocando imagem */
 .conteudo-principal .paineis .cardapio1 {
-    background-image: url('../images/Latte-Perfeito.png'); 
+    background-image: url('../images/Latte-Tradicional.png'); 
 }
 .conteudo-principal .paineis .cardapio2 {
-    background-image: url('../images/Latte-Morango.png'); 
+    background-image: url('../images/Chocolate-Quente-Cremoso.png'); 
 }
 .conteudo-principal .paineis .cardapio3 {
     background-image: url('../images/Latte-Pistache.png'); 
