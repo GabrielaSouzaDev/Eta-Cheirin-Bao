@@ -61,23 +61,23 @@ body {
     flex-wrap: wrap; /* realoca os itens quando a tela é diminuida */
 }
 
-.cabecalho .navegacao .menu{
+.cabecalho .navegacao .lista-navegacao {
     display: flex;
+    gap: 20px;
 }
 
-.cabecalho .navegacao .menu .item{
+.cabecalho .navegacao .lista-navegacao .item{
     margin: 10px;
     color: #3D1A08;
-
 }
 
-.cabecalho .navegacao .menu a{
+.cabecalho .navegacao .lista-navegacao a{
     padding: 15px;
     border-radius: 30px;
     color: #3D1A08;
 }
 
-.cabecalho .navegacao .menu a:hover {
+.cabecalho .navegacao .lista-navegacao a:hover {
     background-color: #3D1A08 ;
     color: #F0DFC0;
 }
@@ -99,7 +99,7 @@ body {
     display: flex;
 }
 
-.navegacao .menu {
+.navegacao .lista-navegacao {
     display: flex;
 }
 
@@ -129,19 +129,20 @@ body {
     /* Menu ativo (mostrar) */
     .navegacao.ativo {
         display: flex;
+        text-align: center;
     }
 
-    .navegacao .menu {
+    .navegacao .lista-navegacao {
         flex-direction: column;
         width: 100%;
     }
 
-    .navegacao .menu .item {
+    .navegacao .lista-navegacao .item {
         margin: 0;
         border-bottom: 1px solid #e2c99a;
     }
 
-    .navegacao .menu a {
+    .navegacao .lista-navegacao a {
         display: block;
         padding: 15px 20px;
         border-radius: 0;
@@ -324,7 +325,7 @@ body {
 
 .menu .itens-menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* ← fixo em 3 colunas no desktop */
     gap: 20px;
     padding: 40px;
     width: 100%;
@@ -342,6 +343,18 @@ body {
     background-color: #F0DFC0;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
+}
+
+@media (max-width: 768px) {
+    .menu .itens-menu {
+        grid-template-columns: 1fr; /* 1 por linha no celular */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .menu .itens-menu {
+        grid-template-columns: repeat(2, 1fr); /* 2 por linha no tablet */
+    }
 }
 
 /*================================ Cardápio ================================= */
